@@ -73,7 +73,7 @@ public class UsuarioView {
 		System.out.println("- Usuario: " + user.getLogin());
 		System.out.println("- Senha: " + user.getSenha());
 		System.out.println("*********");
-
+		menuUsuario(user);
 	}
 
 }
