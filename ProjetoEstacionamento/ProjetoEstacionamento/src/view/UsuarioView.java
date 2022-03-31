@@ -8,8 +8,6 @@ public class UsuarioView {
 
 	public void menuUsuario(Usuario user) {
 
-		int opcao;
-		
 		Scanner entrada = new Scanner(System.in);
 
 		System.out.println("*** Menu Usuario ***");
@@ -22,8 +20,7 @@ public class UsuarioView {
 		System.out.println("-");
 		System.out.println("*********");
 
-		opcao = entrada.nextInt();
-		//entrada.close();
+		int opcao = entrada.nextInt();
 
 		switch (opcao) {
 		case 9:
@@ -40,30 +37,23 @@ public class UsuarioView {
 	}
 
 	public void menuCadastrar() {
-		
-		
-		Usuario us = new Usuario();
-
-		Scanner entrada2 = new Scanner(System.in);
+		Usuario user = new Usuario();
+		Scanner entrada = new Scanner(System.in);
 
 		
 		System.out.println("*** Menu Usuario ***");
 		System.out.println("-");
 
 		System.out.println("- Informe o usuario: ");
-		us.setLogin(entrada2.next());
+		user.setLogin(entrada.next());
 
 		System.out.println("- Informe a senha: ");
-		us.setSenha(entrada2.next());
+		user.setSenha(entrada.next());
 		
 		System.out.println("-");
 		System.out.println("- Cadastro realizado!!!");
 		
-		menuUsuario(us);
-		//entrada2.close();
-		
-		
-
+		menuUsuario(user);
 	}
 	
 	public void menuListar(Usuario user) {
@@ -73,7 +63,7 @@ public class UsuarioView {
 		System.out.println("- Usuario: " + user.getLogin());
 		System.out.println("- Senha: " + user.getSenha());
 		System.out.println("*********");
-		menuUsuario(user);
+		menuUsuario(null);
 	}
 
 }

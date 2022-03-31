@@ -5,9 +5,7 @@ import java.util.Scanner;
 public class MenuView {
 
 	public void menu() {
-		
-		int opcao;
-		
+				
 		Scanner entrada = new Scanner(System.in);
 		
 		System.out.println("*** Menu Principal***");
@@ -22,7 +20,7 @@ public class MenuView {
 		System.out.println("- 9 - Sair ");
 		System.out.println("-");
 		System.out.println("*********");
-		opcao = entrada.nextInt();
+		int opcao = entrada.nextInt();
 
 		switch (opcao) {
 		case 9:

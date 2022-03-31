@@ -11,13 +11,11 @@ public class LoginView {
 
 	public void login() {
 
-		Usuario us = new Usuario();
 
 	
 		Scanner sc = new Scanner(System.in);
 
 		
-		MenuView mv = new MenuView();
 
 		System.out.println("*** LOGIN ***");
 
@@ -25,16 +23,17 @@ public class LoginView {
 		System.out.println("-");
 
 		System.out.println(" Informe o USUARIO: ");
-		us.setLogin(sc.next());
+		String username = sc.next();
 
 		System.out.println(" Informe a SENHA: ");
-		us.setSenha(sc.next());
+		String password = sc.next();
 
 		System.out.println("-");
 
 		System.out.println("- LOGADO COM SUCESSO!");
 		System.out.println("***      ***");
 		
+		MenuView mv = new MenuView();
 		mv.menu();
 	}
 }
