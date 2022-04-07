@@ -2,6 +2,8 @@ package view;
 
 import java.util.Scanner;
 
+import model.TipoVeiculo;
+
 public class MenuView {
 
 	public void menu() {
@@ -28,8 +30,20 @@ public class MenuView {
 			System.out.println("Programa finalizado");
 			break;
 		case 1:
-			UsuarioView uv = new UsuarioView();
-			uv.menuUsuario(null);
+			UsuarioView usuarioview = new UsuarioView();
+			usuarioview.menuUsuario(null);
+			break;
+		case 2:
+			TipoVeiculoView tipoveiculoview = new TipoVeiculoView();
+			tipoveiculoview.menuVeiculo(null);
+			break;
+		case 3:
+			VeiculoView veiculoview = new VeiculoView();
+			veiculoview.menuVeiculo(null);
+			break;
+		case 4:
+			PessoaView pessoaview = new PessoaView();
+			pessoaview.menuPessoa(null);
 			break;
 		}
 
