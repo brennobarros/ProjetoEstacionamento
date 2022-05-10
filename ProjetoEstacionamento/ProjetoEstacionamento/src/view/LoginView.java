@@ -1,19 +1,26 @@
 package view;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 import model.Usuario;
 
 public class LoginView {
 	
-	
 
 
-	public void login() {
+
+	public void login() throws IOException {
 
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("*** LOGIN ***");
+		FileWriter arq = new FileWriter("C:\\Users\\Brenno\\Desktop\\BD.txt");
+		PrintWriter gravarArq = new PrintWriter(arq);
+		
+		gravarArq.printf("*** LOGIN ***");
+		//System.out.println("*** LOGIN ***");
 
 		System.out.println("-");
 		System.out.println("-");

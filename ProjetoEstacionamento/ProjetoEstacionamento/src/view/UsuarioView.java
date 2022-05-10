@@ -23,15 +23,15 @@ public class UsuarioView {
 		int opcao = entrada.nextInt();
 
 		switch (opcao) {
-		case 9:
-			MenuView mv = new MenuView();
-			mv.menu();
-			break;
 		case 1:
 			menuCadastrar();
 			break;
 		case 2:
 			menuListar(user);
+			break;
+		case 9:
+			MenuView mv = new MenuView();
+			mv.menu();
 			break;
 		}
 	}
@@ -40,7 +40,6 @@ public class UsuarioView {
 		Usuario user = new Usuario();
 		Scanner entrada = new Scanner(System.in);
 
-		
 		System.out.println("*** Menu Usuario ***");
 		System.out.println("-");
 
@@ -49,13 +48,13 @@ public class UsuarioView {
 
 		System.out.println("- Informe a senha: ");
 		user.setSenha(entrada.next());
-		
+
 		System.out.println("-");
 		System.out.println("- Cadastro realizado!!!");
-		
+
 		menuUsuario(user);
 	}
-	
+
 	public void menuListar(Usuario user) {
 		System.out.println("*** Lista de Usuario ***");
 		System.out.println("-");
